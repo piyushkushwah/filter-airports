@@ -1,0 +1,24 @@
+thead{
+    background:rgba(128, 128, 128, 0.342);
+}
+
+th,td{
+    padding: 1.2rem;
+    width: 100vw;
+    text-align: left;
+}
+
+.light-gray-bg{
+    background-color: rgba(211, 211, 211, 0.705);
+}
+
+table{
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+.change-page-size{
+    width: 10%;
+    padding: 5px;
+    margin-bottom: 15px;
+}

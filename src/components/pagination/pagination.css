@@ -1,0 +1,22 @@
+.pagination{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.circle-bg{
+    /* background-color: lightgray; */
+    /* padding: 5px 12px; */
+    /* border-radius: 10000px; */
+    cursor: pointer;
+    transition-duration: 500ms;
+}
+
+.circle-bg img{
+    width: 20px;
+    height: 20px;
+}
+
+.circle-bg:active{
+    transform: scale(0.8);
+}
