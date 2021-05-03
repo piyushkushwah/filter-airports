@@ -2,6 +2,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    width: calc(100% - 60px);
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: 20px;
 }
 
 .circle-bg{
@@ -19,4 +25,17 @@
 
 .circle-bg:active{
     transform: scale(0.8);
+}
+
+@media only screen and (max-width: 600px) {
+    .pagination{
+        background-color: white;
+        width: calc(100% - 40px);
+        padding: 10px 0;
+        bottom: 0;
+    }
+    
+    .pagination-text{
+      font-size: 0.8rem;
+    }
 }

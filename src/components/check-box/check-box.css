@@ -1,0 +1,39 @@
+.check-box-border{
+    width: 16px;
+    height: 16px;
+    border: 2.5px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    transition-duration: 500ms;
+}
+
+.check-box-border img{
+    width: 10px;
+    height: 10px;
+    object-fit: contain;
+}
+
+.checkbox-wrapper{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    cursor: pointer;
+}
+
+.checkbox-wrapper p{
+    margin: 0;
+    margin-left: 10px;
+}
+
+.check-box-background{
+    background-color: black;
+}
+
+@media only screen and (max-width: 600px) {
+    .checkbox-wrapper{
+        margin-right: 2em;
+        margin-bottom: 7px;
+    }
+}

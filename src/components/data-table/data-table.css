@@ -1,11 +1,34 @@
 thead{
-    background:rgba(128, 128, 128, 0.342);
+    background:rgba(128, 128, 128, 0.342);  
+    display: block;
+}
+
+.add-scroll{
+    position: relative;
+    width: 100%;
+    overflow-y: scroll;
+}
+
+tr{
+    display: flex;
+}
+
+th{
+    position: sticky;
+    top: 0;
 }
 
 th,td{
-    padding: 1.2rem;
-    width: 100vw;
-    text-align: left;
+  flex-basis:20%;
+  flex-grow:1;
+  display: block;
+  padding: 20px;
+  text-align:left;
+}
+
+th:first-child ,td:first-child{
+    flex-basis: 40%;
+    flex-grow: 2;
 }
 
 .light-gray-bg{
@@ -15,10 +38,57 @@ th,td{
 table{
     border-spacing: 0;
     border-collapse: collapse;
+    width: 100%;
+    position: relative;
 }
 
 .change-page-size{
     width: 10%;
     padding: 5px;
     margin-bottom: 15px;
+}
+
+tbody{
+    display: block;
+    width: 100%;
+    height: 46vh;
+    position:relative;
+    overflow-y: auto;
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1200px) {
+    tbody{
+        height: 60vh;
+    }
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+    .table-wrapper{
+        margin-top: 30px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+     .change-page-size{
+        width: 10%;
+        margin-left: 1px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+    table{
+        width: 1050px;
+    }
+
+    .change-page-size{
+        width: calc(100% - 1px);
+        margin-left: 1px;
+    }
+
+    .change-page-size{
+        margin-top: 15px;
+        margin-bottom: 20px;
+    }
 }

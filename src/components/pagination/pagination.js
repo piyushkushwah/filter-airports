@@ -11,13 +11,9 @@ export default function Pagination(props) {
     const [state, setstate] = useState(initialState)
     const { page } = state;
 
-    console.log(props);
-
     let getPaginate = () => {
-        console.log('paginate called', page);
         let data = props.airpotsData.slice((page - 1) * props.pageSize, (page - 1)
             * props.pageSize + props.pageSize);
-        console.log(data);
         props.returnAction(data);
     }
 
@@ -45,8 +41,8 @@ export default function Pagination(props) {
             <span onClick={pageNumberDecrease.bind(this)} className="circle-bg">
                 <img src={leftArrow} alt="rightArrow" />
             </span>
-            <span>Showing <strong>{(page - 1) * props.pageSize}- {((page - 1)
-                * props.pageSize + props.pageSize) - 1}</strong> of <strong>{props.airpotsData.length}</strong> results</span>
+            <span className="pagination-text">Showing <strong>{((page - 1) * props.pageSize) + 1}- {(((page - 1)
+                * props.pageSize + props.pageSize) - 1) + 1}</strong> of <strong>{props.airpotsData.length}</strong> results</span>
             <span onClick={pageNumberIncrease.bind(this)} className="circle-bg">
                 <img src={rightArrow} alt="leftArrow" />
             </span>
